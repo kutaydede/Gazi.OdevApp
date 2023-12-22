@@ -51,7 +51,31 @@ namespace Gazi.OdevApp
                 MessageBox.Show("Bir hata oluştu!!");
             }
         }
-
+        private void btnOgrtKaydet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var ogrtbl = new OgretmenBL();
+                bool sonuc = ogrtbl.OgretmenEkle(new Ogretmen { Tc = txtOgrtTc.Text.Trim(), Ad = txtOgrtAd.Text.Trim(), Soyad = txtOgrtSoyad.Text.Trim() });
+                MessageBox.Show(sonuc ? "Ekleme başarılı!" : "Ekleme başarısız!!");
+            }
+            catch (SqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 2627:
+                        MessageBox.Show("Bu numara daha önce kayıtlı");
+                        break;
+                    default:
+                        MessageBox.Show("Veritabanı Hatası!");
+                        break;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bir hata oluştu!!");
+            }
+        }
     }
     interface ITransfer
     {

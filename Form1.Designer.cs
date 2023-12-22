@@ -36,7 +36,16 @@
             this.lblNumara = new System.Windows.Forms.Label();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
+            this.btnOgrtKaydet = new System.Windows.Forms.Button();
+            this.grpOgretmen = new System.Windows.Forms.GroupBox();
+            this.txtOgrtTc = new System.Windows.Forms.TextBox();
+            this.lblOgrtAd = new System.Windows.Forms.Label();
+            this.lblOgrtSoyad = new System.Windows.Forms.Label();
+            this.txtOgrtSoyad = new System.Windows.Forms.TextBox();
+            this.txtOgrtAd = new System.Windows.Forms.TextBox();
+            this.lblOgrtTc = new System.Windows.Forms.Label();
             this.grpOgrenci.SuspendLayout();
+            this.grpOgretmen.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnKaydet
@@ -121,17 +130,103 @@
             this.txtAd.Size = new System.Drawing.Size(132, 22);
             this.txtAd.TabIndex = 1;
             // 
+            // btnOgrtKaydet
+            // 
+            this.btnOgrtKaydet.Location = new System.Drawing.Point(526, 240);
+            this.btnOgrtKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOgrtKaydet.Name = "btnOgrtKaydet";
+            this.btnOgrtKaydet.Size = new System.Drawing.Size(133, 28);
+            this.btnOgrtKaydet.TabIndex = 15;
+            this.btnOgrtKaydet.Text = "Kaydet";
+            this.btnOgrtKaydet.UseVisualStyleBackColor = true;
+            this.btnOgrtKaydet.Click += new System.EventHandler(this.btnOgrtKaydet_Click);
+            // 
+            // grpOgretmen
+            // 
+            this.grpOgretmen.Controls.Add(this.txtOgrtTc);
+            this.grpOgretmen.Controls.Add(this.lblOgrtAd);
+            this.grpOgretmen.Controls.Add(this.lblOgrtSoyad);
+            this.grpOgretmen.Controls.Add(this.txtOgrtSoyad);
+            this.grpOgretmen.Controls.Add(this.txtOgrtAd);
+            this.grpOgretmen.Controls.Add(this.lblOgrtTc);
+            this.grpOgretmen.Location = new System.Drawing.Point(416, 32);
+            this.grpOgretmen.Margin = new System.Windows.Forms.Padding(4);
+            this.grpOgretmen.Name = "grpOgretmen";
+            this.grpOgretmen.Padding = new System.Windows.Forms.Padding(4);
+            this.grpOgretmen.Size = new System.Drawing.Size(281, 187);
+            this.grpOgretmen.TabIndex = 14;
+            this.grpOgretmen.TabStop = false;
+            this.grpOgretmen.Text = "Öğretmen Bilgileri";
+            // 
+            // txtOgrtTc
+            // 
+            this.txtOgrtTc.Location = new System.Drawing.Point(112, 37);
+            this.txtOgrtTc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOgrtTc.Name = "txtOgrtTc";
+            this.txtOgrtTc.Size = new System.Drawing.Size(132, 22);
+            this.txtOgrtTc.TabIndex = 3;
+            // 
+            // lblOgrtAd
+            // 
+            this.lblOgrtAd.AutoSize = true;
+            this.lblOgrtAd.Location = new System.Drawing.Point(39, 90);
+            this.lblOgrtAd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOgrtAd.Name = "lblOgrtAd";
+            this.lblOgrtAd.Size = new System.Drawing.Size(24, 16);
+            this.lblOgrtAd.TabIndex = 4;
+            this.lblOgrtAd.Text = "Ad";
+            // 
+            // lblOgrtSoyad
+            // 
+            this.lblOgrtSoyad.AutoSize = true;
+            this.lblOgrtSoyad.Location = new System.Drawing.Point(39, 144);
+            this.lblOgrtSoyad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOgrtSoyad.Name = "lblOgrtSoyad";
+            this.lblOgrtSoyad.Size = new System.Drawing.Size(47, 16);
+            this.lblOgrtSoyad.TabIndex = 5;
+            this.lblOgrtSoyad.Text = "Soyad";
+            // 
+            // txtOgrtSoyad
+            // 
+            this.txtOgrtSoyad.Location = new System.Drawing.Point(112, 138);
+            this.txtOgrtSoyad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOgrtSoyad.Name = "txtOgrtSoyad";
+            this.txtOgrtSoyad.Size = new System.Drawing.Size(132, 22);
+            this.txtOgrtSoyad.TabIndex = 2;
+            // 
+            // txtOgrtAd
+            // 
+            this.txtOgrtAd.Location = new System.Drawing.Point(111, 81);
+            this.txtOgrtAd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOgrtAd.Name = "txtOgrtAd";
+            this.txtOgrtAd.Size = new System.Drawing.Size(132, 22);
+            this.txtOgrtAd.TabIndex = 1;
+            // 
+            // lblOgrtTc
+            // 
+            this.lblOgrtTc.AutoSize = true;
+            this.lblOgrtTc.Location = new System.Drawing.Point(39, 46);
+            this.lblOgrtTc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOgrtTc.Name = "lblOgrtTc";
+            this.lblOgrtTc.Size = new System.Drawing.Size(23, 16);
+            this.lblOgrtTc.TabIndex = 6;
+            this.lblOgrtTc.Text = "Tc";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 281);
+            this.ClientSize = new System.Drawing.Size(740, 280);
+            this.Controls.Add(this.btnOgrtKaydet);
+            this.Controls.Add(this.grpOgretmen);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.grpOgrenci);
             this.Name = "Form1";
             this.Text = "Form1";
             this.grpOgrenci.ResumeLayout(false);
             this.grpOgrenci.PerformLayout();
+            this.grpOgretmen.ResumeLayout(false);
+            this.grpOgretmen.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -145,6 +240,14 @@
         private System.Windows.Forms.Label lblNumara;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.Button btnOgrtKaydet;
+        private System.Windows.Forms.GroupBox grpOgretmen;
+        private System.Windows.Forms.TextBox txtOgrtTc;
+        private System.Windows.Forms.Label lblOgrtAd;
+        private System.Windows.Forms.Label lblOgrtSoyad;
+        private System.Windows.Forms.TextBox txtOgrtSoyad;
+        private System.Windows.Forms.TextBox txtOgrtAd;
+        private System.Windows.Forms.Label lblOgrtTc;
     }
 }
 
